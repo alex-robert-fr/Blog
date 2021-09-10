@@ -11,7 +11,7 @@
         <img src="https://source.unsplash.com/random/1600x1000" alt="">
         <section class="header">
             <h1>{{ articles|last.title }}</h1>
-            <a href="#" class="button">Link to article </a>
+            <a href="{{ path('app_article_index', {'id': articles|last.id}) }}" class="button">Link to article </a>
         </section>
     </header>
     <main>
@@ -19,18 +19,18 @@
         <section class="grid">
             {% for article in articles %}
                 <section>
-                    <a href="#">
+                    <a href="{{ path('app_article_index', {'id': article.id}) }}">
                         <img src="https://source.unsplash.com/random/1600x1000" alt="">
                     </a>
                     <div class="resume-article">
                         <div class="heading">
-                            <a href="#">
+                            <a href="{{ path('app_article_index', {'id': article.id}) }}">
                                 <h3>{{ article.title }}</h3>
                             </a>
                             <span class="info">{{ article.date|format_datetime('long', 'none', locale='fr') }}</span>
                             <span class="info">10 commentaires</span>
                         </div>
-                        <p>{{ article.content }}</p>
+                        <p>{{ article.content|slice(0, 310) }}...</p>
                     </div>
                 </section>
             {% endfor %}
