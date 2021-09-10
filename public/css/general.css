@@ -47,8 +47,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 1.2rem;
-  margin: 10px 0 15px;
+  font-size: 1.4rem;
 }
 
 .button {
@@ -57,6 +56,17 @@ h3, .h3 {
   background: #fff;
   padding: 10px 20px;
   border: 1px solid #000;
+}
+
+.heading {
+  margin: 10px 0 15px;
+}
+.heading > .info:first-of-type {
+  margin-right: 15px;
+}
+
+.info {
+  font-size: 0.9rem;
 }
 
 /*# sourceMappingURL=general.css.map */
