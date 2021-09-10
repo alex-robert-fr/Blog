@@ -1,0 +1,17 @@
+.header {
+  height: 75vh;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  padding: 0 12vw;
+  gap: 100px 50px;
+}
+.grid > section > img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=home.css.map */

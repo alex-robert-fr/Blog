@@ -1,52 +1,56 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Home | {{ parent() }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
 
 {% block body %}
     <header>
-        <section>
+        <section class="header">
             <h1>Title of last article</h1>
             <a href="#">Link to article </a>
         </section>
     </header>
-    <main>
+    <main class="grid">
         <section>
-            <img src="" alt="">
+            <img src="https://source.unsplash.com/random/1600x1000" alt="">
             <div class="resume-article">
                 <h3>Title of article</h3>
                 <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
             </div>
         </section>
         <section>
-            <img src="" alt="">
+            <img src="https://source.unsplash.com/random/1600x1000" alt="">
             <div class="resume-article">
                 <h3>Title of article</h3>
                 <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
             </div>
         </section>
         <section>
-            <img src="" alt="">
+            <img src="https://source.unsplash.com/random/1600x1000" alt="">
             <div class="resume-article">
                 <h3>Title of article</h3>
                 <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
             </div>
         </section>
         <section>
-            <img src="" alt="">
+            <img src="https://source.unsplash.com/random/1600x1000" alt="">
             <div class="resume-article">
                 <h3>Title of article</h3>
                 <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
             </div>
         </section>
         <section>
-            <img src="" alt="">
+            <img src="https://source.unsplash.com/random/1600x1000" alt="">
             <div class="resume-article">
                 <h3>Title of article</h3>
                 <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
             </div>
         </section>
         <section>
-            <img src="" alt="">
+            <img src="https://source.unsplash.com/random/1600x1000" alt="">
             <div class="resume-article">
                 <h3>Title of article</h3>
                 <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
