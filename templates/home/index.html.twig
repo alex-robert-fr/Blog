@@ -16,72 +16,19 @@
     <main>
         <h2>Blog</h2>
         <section class="grid">
-            <section>
-                <img src="https://source.unsplash.com/random/1600x1000" alt="">
-                <div class="resume-article">
-                    <div class="heading">
-                        <h3>Title of article</h3>
-                        <span class="info">10 Septembre, 2021</span>
-                        <span class="info">10 commentaires</span>
+            {% for article in articles %}
+                <section>
+                    <img src="https://source.unsplash.com/random/1600x1000" alt="">
+                    <div class="resume-article">
+                        <div class="heading">
+                            <h3>{{ article.title }}</h3>
+                            <span class="info">{{ article.date|format_datetime('long', 'none', locale='fr') }}</span>
+                            <span class="info">10 commentaires</span>
+                        </div>
+                        <p>{{ article.content }}</p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-                </div>
-            </section>
-            <section>
-                <img src="https://source.unsplash.com/random/1600x1000" alt="">
-                <div class="resume-article">
-                    <div class="heading">
-                        <h3>Title of article</h3>
-                        <span class="info">10 Septembre, 2021</span>
-                        <span class="info">10 commentaires</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-                </div>
-            </section>
-            <section>
-                <img src="https://source.unsplash.com/random/1600x1000" alt="">
-                <div class="resume-article">
-                    <div class="heading">
-                        <h3>Title of article</h3>
-                        <span class="info">10 Septembre, 2021</span>
-                        <span class="info">10 commentaires</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-                </div>
-            </section>
-            <section>
-                <img src="https://source.unsplash.com/random/1600x1000" alt="">
-                <div class="resume-article">
-                    <div class="heading">
-                        <h3>Title of article</h3>
-                        <span class="info">10 Septembre, 2021</span>
-                        <span class="info">10 commentaires</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-                </div>
-            </section>
-            <section>
-                <img src="https://source.unsplash.com/random/1600x1000" alt="">
-                <div class="resume-article">
-                    <div class="heading">
-                        <h3>Title of article</h3>
-                        <span class="info">10 Septembre, 2021</span>
-                        <span class="info">10 commentaires</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-                </div>
-            </section>
-            <section>
-                <img src="https://source.unsplash.com/random/1600x1000" alt="">
-                <div class="resume-article">
-                    <div class="heading">
-                        <h3>Title of article</h3>
-                        <span class="info">10 Septembre, 2021</span>
-                        <span class="info">10 commentaires</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-                </div>
-            </section>
+                </section>
+            {% endfor %}
         </section>
     </main>
     <footer>
