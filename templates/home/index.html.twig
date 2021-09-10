@@ -19,10 +19,14 @@
         <section class="grid">
             {% for article in articles %}
                 <section>
-                    <img src="https://source.unsplash.com/random/1600x1000" alt="">
+                    <a href="#">
+                        <img src="https://source.unsplash.com/random/1600x1000" alt="">
+                    </a>
                     <div class="resume-article">
                         <div class="heading">
-                            <h3>{{ article.title }}</h3>
+                            <a href="#">
+                                <h3>{{ article.title }}</h3>
+                            </a>
                             <span class="info">{{ article.date|format_datetime('long', 'none', locale='fr') }}</span>
                             <span class="info">10 commentaires</span>
                         </div>
