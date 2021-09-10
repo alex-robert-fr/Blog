@@ -10,11 +10,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'SpaceGrotesk';
 }
 
-.header{
+header{
+  position: relative;
+  height: 75vh;
   background-image: url('https://source.unsplash.com/random/1600x800');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: center;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+h1, .h1{
+  background-color: #fff;
+  padding: 15px 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.button{
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  padding: 10px 20px;
+  border: 1px solid #000;
 }
