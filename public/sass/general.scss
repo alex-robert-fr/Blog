@@ -6,14 +6,16 @@
   src: url('../font/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
 }
 
-*, ::before, ::after{
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'SpaceGrotesk';
 }
 
-header{
+header {
   position: relative;
   height: 75vh;
   background-image: url('https://source.unsplash.com/random/1600x800');
@@ -22,20 +24,22 @@ header{
   background-size: cover;
   text-align: center;
 }
-.header{
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-h1, .h1{
+h1,
+.h1 {
   background-color: #fff;
   padding: 15px 30px;
   font-size: 2.5rem;
   font-weight: 700;
 }
-h2, .h2{
+h2,
+.h2 {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
@@ -43,22 +47,41 @@ h2, .h2{
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 40px;
 }
-h3, .h3{
+h3,
+.h3 {
   font-size: 1.4rem;
 }
-.button{
+.button {
   text-decoration: none;
   color: #000;
   background: #fff;
   padding: 10px 20px;
   border: 1px solid #000;
 }
-.heading{
+.heading {
   margin: 10px 0 15px;
-  >.info:first-of-type{
+  >.info:first-of-type {
     margin-right: 15px;
   }
+  > .info {
+    color: #999;
+  }
 }
-.info{
-  font-size: .9rem;
+.info {
+  font-size: 0.9rem;
+}
+footer {
+  margin-top: 75px;
+  text-align: center;
+  color: #999;
+  background: #000;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  font-weight: 100;
+  p:first-of-type{
+    margin-bottom: 10px;
+  }
+  span{
+    color: #fff;
+  }
 }
