@@ -18,13 +18,18 @@
 header {
   position: relative;
   height: 75vh;
-  background-image: url('https://source.unsplash.com/random/1600x800');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   text-align: center;
+  overflow: hidden;
+  >img{
+    width: 100%;
+    z-index: 0;
+  }
 }
 .header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;

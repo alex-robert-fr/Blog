@@ -8,8 +8,9 @@
 
 {% block body %}
     <header>
+        <img src="https://source.unsplash.com/random/1600x1000" alt="">
         <section class="header">
-            <h1>Title of last article</h1>
+            <h1>{{ articles|last.title }}</h1>
             <a href="#" class="button">Link to article </a>
         </section>
     </header>
