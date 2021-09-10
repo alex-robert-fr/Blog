@@ -1,3 +1,9 @@
-
+@font-face {
+  /**
+   * !---300 -> 700---!
+   */
+  font-family: "SpaceGrotesk";
+  src: url("../font/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+}
 
 /*# sourceMappingURL=general.css.map */
