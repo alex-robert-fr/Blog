@@ -23,7 +23,7 @@ class HomeController extends AbstractController
     public function insertArticles(): Response
     {
         $article = new Article();
-        $article->setTitle('Dernier article !!!');
+        $article->setTitle('Salut moi c\'est Lynn');
         $article->setContent('Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
         labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
         animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est

@@ -21,14 +21,21 @@
         <article>
             <p>{{ article.content }}</p>
         </article>
-        <section class="comments">
+        <section class="comments-form">
+            <h3>Commentaires postés</h3>
             {{ form_start(form) }}
-                {{ form_row(form.comment) }}
-                {{ form_row(form.name) }}
-                {{ form_row(form.email) }}
-                {{ form_row(form.createdAt) }}
-                {{ form_widget(form.article, {value: id}) }}
-                <input type="submit" value="Envoyer">
+                <div>
+                    {{ form_widget(form.comment, { 'attr': { 'placeholder': 'Commentaire', 'rows': '1' } }) }}
+                </div>
+                <div>
+                    {{ form_widget(form.name, { 'attr': { 'placeholder': 'Nom' } }) }}
+                </div>
+                <div>
+                    {{ form_widget(form.email, { 'attr': { 'placeholder': 'Email (facultatif)' } }) }}
+                </div>
+                {{ form_widget(form.createdAt, { 'attr': { 'class': 'hidden' } }) }}
+                {{ form_widget(form.article, {value: id, 'attr': { 'class': 'hidden' }}) }}
+                <input type="submit" class="button" value="Envoyer">
             {{ form_end(form) }}
         </section>
     </main>
