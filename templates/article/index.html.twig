@@ -21,6 +21,16 @@
         <article>
             <p>{{ article.content }}</p>
         </article>
+        <section class="comments">
+            {{ form_start(form) }}
+                {{ form_row(form.comment) }}
+                {{ form_row(form.name) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.createdAt) }}
+                {{ form_row(form.article) }}
+                <input type="submit" value="Envoyer">
+            {{ form_end(form) }}
+        </section>
     </main>
     {{ parent() }}
 {% endblock %}

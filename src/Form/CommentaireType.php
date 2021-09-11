@@ -6,6 +6,8 @@ use App\Entity\Commentaire;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class CommentaireType extends AbstractType
 {
@@ -15,7 +17,7 @@ class CommentaireType extends AbstractType
             ->add('comment')
             ->add('name')
             ->add('email')
-            ->add('createdAt')
+            ->add('createdAt', DateType::class, ['input' => 'datetime_immutable'] )
             ->add('article')
         ;
     }
