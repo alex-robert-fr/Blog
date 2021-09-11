@@ -33,7 +33,7 @@ class Commentaire
     private $email;
 
     /**
-     * @ORM\Column(type="datetime_immutable")
+     * @ORM\Column(type="datetime")
      */
     private $createdAt;
 
