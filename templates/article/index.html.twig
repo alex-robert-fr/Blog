@@ -27,7 +27,7 @@
                 {{ form_row(form.name) }}
                 {{ form_row(form.email) }}
                 {{ form_row(form.createdAt) }}
-                {{ form_row(form.article) }}
+                {{ form_widget(form.article, {value: id}) }}
                 <input type="submit" value="Envoyer">
             {{ form_end(form) }}
         </section>

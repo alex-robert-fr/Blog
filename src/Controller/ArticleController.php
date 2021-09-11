@@ -16,6 +16,7 @@ class ArticleController extends AbstractController
     public function index(int $id, ArticleRepository $articleRepository, Request $request): Response
     {
         $article = $articleRepository->find($id);
+        $id = strval($id);
 
         /**
          * *---Form---*
@@ -24,7 +25,7 @@ class ArticleController extends AbstractController
         $form = $this->createForm(CommentaireType::class,$comments);
 
         $form->handleRequest($request);
-
+        
         if ($form->isSubmitted() && $form->isValid()) {
             $comments->setArticle($comments->getArticle());
             $comments->setComment($comments->getComment());
@@ -38,6 +39,7 @@ class ArticleController extends AbstractController
         }
 
         return $this->render('article/index.html.twig', [
+            'id' => $id,
             'form' => $form->createView(),
             'article' => $article,
         ]);
