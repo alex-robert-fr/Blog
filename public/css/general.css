@@ -14,7 +14,8 @@
   font-family: "SpaceGrotesk";
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -49,6 +50,41 @@ article {
   line-height: 2;
 }
 
+.comments {
+  display: flex;
+  flex-direction: column;
+  margin: 75px 25vw 0;
+}
+.comments > .comment {
+  display: flex;
+  margin: 25px 0;
+}
+.comments > .comment > aside {
+  position: relative;
+  height: 63px;
+  width: 63px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.comments > .comment > aside > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.comments > .comment > section .date {
+  color: #999;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.comments > .comment > section .name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 3px 0 10px;
+}
+.comments > .comment > section .content {
+  font-size: 1rem;
+}
 .comments-form {
   display: flex;
   flex-direction: column;
@@ -58,10 +94,14 @@ article {
 .comments-form > h3 {
   margin-bottom: 36px;
 }
-.comments-form > form, .comments-form > form > div, .comments-form > form > div > input, .comments-form > form > div > textarea {
+.comments-form > form,
+.comments-form > form > div,
+.comments-form > form > div > input,
+.comments-form > form > div > textarea {
   width: 100%;
 }
-.comments-form > form > div > input, .comments-form > form > div > textarea {
+.comments-form > form > div > input,
+.comments-form > form > div > textarea {
   border: none;
   margin-bottom: 36px;
   border-bottom: #000 solid 1px;
@@ -70,7 +110,8 @@ article {
   outline: none;
   font-style: italic;
 }
-.comments-form > form > div > input::placeholder, .comments-form > form > div > textarea::placeholder {
+.comments-form > form > div > input::placeholder,
+.comments-form > form > div > textarea::placeholder {
   color: #000;
 }
 .comments-form textarea {
