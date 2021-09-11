@@ -23,15 +23,10 @@ class ArticleController extends AbstractController
         $id = strval($id);
 
         /**
-         * *---Recovery comments---*
-         */
-        $commentsArticle = $commentaireRepository->findBy(['article' => $id]);
-
-        /**
          * *---Form---*
          */
         $comments = new Commentaire();
-        $form = $this->createForm(CommentaireType::class,$comments);
+        $form = $this->createForm(CommentaireType::class, $comments);
 
         $form->handleRequest($request);
         
@@ -40,7 +35,20 @@ class ArticleController extends AbstractController
 
             $entityManager->persist($comments);
             $entityManager->flush();
+
+            /**
+             * *---Reset field form---*
+             */
+            unset($comments);
+            unset($form);
+            $comments = new Commentaire();
+            $form = $this->createForm(CommentaireType::class, $comments);
         }
+
+        /**
+         * *---Recovery comments---*
+         */
+        $commentsArticle = $commentaireRepository->findBy(['article' => $id]);
 
         return $this->render('article/index.html.twig', [
             'id' => $id,

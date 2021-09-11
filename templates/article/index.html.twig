@@ -5,6 +5,8 @@
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('css/article.css') }}">
 {% endblock %}
+{% block scripts %}
+{% endblock %}
 
 {% block body %}
     <header>
@@ -23,7 +25,7 @@
         </article>
         <section class="comments-form">
             <h3>Commentaires postés</h3>
-            {{ form_start(form) }}
+            {{ form_start(form, { 'attr': { 'id': 'formComments' } }) }}
                 <div>
                     {{ form_widget(form.comment, { 'attr': { 'placeholder': 'Commentaire', 'rows': '1' } }) }}
                 </div>
@@ -38,7 +40,7 @@
                 <input type="submit" class="button" value="Envoyer">
             {{ form_end(form) }}
         </section>
-        <section class="comments">
+        <section id="comments" class="comments">
             {% for comment in comments %}
             <section class="comment">
                 <aside>
