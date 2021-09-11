@@ -39,26 +39,18 @@
             {{ form_end(form) }}
         </section>
         <section class="comments">
+            {% for comment in comments %}
             <section class="comment">
                 <aside>
                     <img src="https://source.unsplash.com/random/200x100" alt="">
                 </aside>
                 <section>
                     <p class="date">10/12/2002</p>
-                    <p class="name">Name</p>
-                    <p class="content">Description</p>
+                    <p class="name">{{ comment.name }}</p>
+                    <p class="content">{{ comment.comment }}</p>
                 </section>
             </section>
-            <section class="comment">
-                <aside>
-                    <img src="https://source.unsplash.com/random/200x100" alt="">
-                </aside>
-                <section>
-                    <p class="date">10/12/2002</p>
-                    <p class="name">Name</p>
-                    <p class="content">Description</p>
-                </section>
-            </section>
+            {% endfor %}
         </section>
     </main>
     {{ parent() }}
