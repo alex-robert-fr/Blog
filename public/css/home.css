@@ -6,8 +6,16 @@
   padding: 0 12vw;
   gap: 100px 50px;
 }
-.grid > section > a > img {
+.grid > section > div {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+}
+.grid > section > div > a > img {
   width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .button {

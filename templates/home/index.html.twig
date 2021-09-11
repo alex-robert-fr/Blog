@@ -8,7 +8,7 @@
 
 {% block body %}
     <header>
-        <img src="https://source.unsplash.com/random/1600x1000" alt="">
+        <img src="https://source.unsplash.com/random/1600x1500" alt="">
         <section class="header">
             <h1>{{ articles|last.title }}</h1>
             <a href="{{ path('app_article_index', {'id': articles|last.id}) }}" class="button">Link to article </a>
@@ -19,9 +19,11 @@
         <section class="grid">
             {% for article in articles %}
                 <section>
-                    <a href="{{ path('app_article_index', {'id': article.id}) }}">
-                        <img src="https://source.unsplash.com/random/1600x1000" alt="">
-                    </a>
+                    <div>
+                        <a href="{{ path('app_article_index', {'id': article.id}) }}">
+                            <img src="https://source.unsplash.com/random/1600x1500" alt="">
+                        </a>
+                    </div>
                     <div class="resume-article">
                         <div class="heading">
                             <a href="{{ path('app_article_index', {'id': article.id}) }}">
