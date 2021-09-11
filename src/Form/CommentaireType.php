@@ -17,7 +17,10 @@ class CommentaireType extends AbstractType
             ->add('comment')
             ->add('name')
             ->add('email')
-            ->add('createdAt', DateType::class, ['input' => 'datetime_immutable'] )
+            ->add('createdAt', DateType::class, [
+                'input' => 'datetime_immutable',
+                'data' => new \DateTimeImmutable('now')
+            ])
             ->add('article')
         ;
     }

@@ -27,11 +27,6 @@ class ArticleController extends AbstractController
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) {
-            $comments->setArticle($comments->getArticle());
-            $comments->setComment($comments->getComment());
-            $comments->setName($comments->getName());
-            $comments->setCreatedAt($comments->getCreatedAt());
-
             $entityManager = $this->getDoctrine()->getManager();
 
             $entityManager->persist($comments);
