@@ -17,7 +17,7 @@
     </header>
     <main>
         <div class="heading-article">
-            <span class="info">{{ article.date|format_datetime('long', 'none', locale='fr') }}</span>
+            <span class="info">{{ article.date|format_datetime('long', 'short', locale='fr') }}</span>
             <span class="info">10 commentaires</span>
         </div>
         <article>
@@ -47,7 +47,7 @@
                     <img src="https://source.unsplash.com/random/200x100" alt="">
                 </aside>
                 <section>
-                    <p class="date">10/12/2002</p>
+                    <p class="date">{{ comment.createdAt|format_datetime('medium', 'short', locale='fr') }}</p>
                     <p class="name">{{ comment.name }}</p>
                     <p class="content">{{ comment.comment }}</p>
                 </section>

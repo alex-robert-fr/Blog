@@ -7,7 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 class CommentaireType extends AbstractType
 {
@@ -17,9 +17,8 @@ class CommentaireType extends AbstractType
             ->add('comment')
             ->add('name')
             ->add('email')
-            ->add('createdAt', DateType::class, [
-                'input' => 'datetime_immutable',
-                'data' => new \DateTimeImmutable('now')
+            ->add('createdAt', DateTimeType::class, [
+                'data' => new \DateTime('now', new \DateTimeZone('Europe/Paris'))
             ])
             ->add('article')
         ;
